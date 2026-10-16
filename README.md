@@ -43,8 +43,8 @@ Visually inspected references: https://paco.me/ (compact identity and quiet text
 
 ## Existing hosting and rollback
 
-The existing Netlify project is `rajvir-portfolio`, in Rajvira10’s team. It is manually deployed with Netlify Drop and has no linked repository in its project overview. Production has not been changed.
+The existing Netlify project is `rajvir-portfolio`, in Rajvira10’s team. It is manually deployed with Netlify Drop and has no linked repository in its project overview. The reviewed refresh was published with Netlify Drop after user approval on 17 October 2026 (UTC).
 
 Original deploy permalink: https://649c5bb702b27a2a3bf21e31--rajvir-portfolio.netlify.app/ . Source history and original assets remain intact.
 
-After design/content approval, upload only the contents of `build/` to the existing project. A manual upload in the current Netlify project may publish immediately; do not use it as a preview mechanism before approval. No account, credential, paid-plan or infrastructure changes are required.
+Published deploy: https://6ad2666eda889265a9a0526f--rajvir-portfolio.netlify.app/ . All four live files were verified byte-for-byte against the reviewed build from commit `ec6c441`. Desktop and phone rendering and contact destinations were checked on the live site. No account, credential, paid-plan or infrastructure settings were changed. For future updates, upload only `build/` to this existing project after review; manual uploads publish immediately.

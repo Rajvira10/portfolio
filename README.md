@@ -5,8 +5,8 @@ Source for https://rajvir-portfolio.netlify.app/ . The repository now contains t
 ## Source and publication status
 
 - `ec6c441`: approved sparse design, published on 17 October 2026.
-- `4c53d91`: adds Remvyn and refreshes selected contribution links. This source update is ready; its separate Netlify publication approval is still pending.
-- The current public site is the October 17 version until that deployment is approved and completed. A repository push alone does not publish the site.
+- `4c53d91`: adds Remvyn and refreshes selected contribution links. Published through the Git-backed deployment of `faa5e43` on 30 October 2026.
+- The existing Netlify site now tracks `master` in this repository. Pushing to `master` starts an automatic production build and deployment; wait for a successful deploy before treating the live site as updated.
 
 The older components and assets remain for reference. `src/App.js`, `src/App.css` and `src/index.css` define the current page. Updating an old component under `src/container/` will not update the current page unless it is imported by `App.js`.
 
@@ -32,16 +32,23 @@ Open http://127.0.0.1:18765/ . `npm run build` runs the production compiler and 
 
 Preview `build/` before publishing: this is the actual production output and works without JavaScript, a CMS or API requests. Check desktop and phone layouts, keyboard focus, contact links and contribution status labels.
 
-## Deploy to the existing Netlify project
+## Continuous deployment to the existing Netlify project
 
-The existing project is **rajvir-portfolio**, in **Rajvira10's team**. As verified on 30 October 2026, Netlify's Developer settings shows **Current repository: Not linked**. GitHub also has no repository webhooks or Actions workflows configured. Do not connect a repository or alter deployment settings as part of a content update.
+The existing **rajvir-portfolio** project in **Rajvira10's team** is linked to **Rajvira10/portfolio** as of 30 October 2026. The URL remains https://rajvir-portfolio.netlify.app/ .
 
-1. Obtain review and publication approval for the specific production preview and any changed professional claims.
-2. Build with `npm run build`.
-3. In the existing Netlify project, upload the **contents of `build/`**, or a ZIP whose root contains `index.html`. Do not upload this whole repository, its `.git`, dependencies, local environment files or screenshots.
-4. A manual upload publishes immediately. Verify the production URL, new deploy permalink, contact destinations and files against the reviewed build.
+Netlify build configuration:
 
-Do not treat a successful GitHub push as evidence that Netlify changed. The Remvyn update remains pending deployment approval even though its source is available here.
+- Production branch: `master`.
+- Base directory: repository root (blank in the Netlify form).
+- Build command: `npm run build`.
+- Publish directory: `build`.
+- No environment variables are needed for this page.
+
+Preview and review changes locally before pushing or merging to `master`, especially changed public professional claims. A push to `master` now deploys automatically; use a separate branch for work that must stay out of production. No manual ZIP upload is required.
+
+After each production push, inspect the existing project's Deploys page. Confirm the deploy succeeds and names the intended commit, then verify the live content and contact links. A successful push is not itself proof that the deployment succeeded. Keep the repository linked to this existing project rather than creating a second site or changing domains.
+
+The first Git-backed deployment succeeded at https://6ae470f7b222c596619b99f4--rajvir-portfolio.netlify.app/ from `faa5e43`. Its page content matched the reviewed source; Netlify generated a different stylesheet fingerprint, with only legacy vendor-prefix and source-map-comment differences from the local CSS. Desktop and phone layouts and contact destinations were checked on the live site.
 
 ## Recoverable versions
 

@@ -61,3 +61,12 @@ footer>span { font-size: 10px; color: #707070; }
   .status-note { font-size: 10px; }
   footer { margin-top: 45px; }
 }
+
+.product { margin-top: 45px; }
+.product h3 { font-size: 18px; margin: 20px 0 10px; }
+.product h3 a { text-decoration: none; }
+.product h3 a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.product h3 span { font-size: 13px; color: #707070; margin-left: 5px; }
+.product p { font-size: 14px; line-height: 1.7; margin: 0; max-width: 470px; }
+.product .product-stack { font-size: 11px; color: #707070; margin-top: 12px; }
+.product + .work { margin-top: 42px; }
